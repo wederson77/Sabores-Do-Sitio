@@ -1,0 +1,401 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f5f1e6;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* LINKS */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* HEADER */
+header {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ff8c42;
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: #fff;
+  font-size: 14px;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* underline elegante */
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #ff8c42;
+  left: 0;
+  bottom: -4px;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+              url('assets/paes_background.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.hero h1 {
+  font-size: 82px;
+  margin-bottom: 150px;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  margin-bottom: 25px;
+  font-size: 18px;
+  opacity: 0.95;
+}
+
+/* SECTIONS */
+section {
+  padding: 10px 20px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 10px;
+  color: #222;
+  font-size: 28px;
+}
+
+/* GRID PRODUTOS */
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* CARD */
+.card {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  background: #fff9f0;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card-header-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 30px 20px 20px;
+  position: relative;
+  background: #fff9f0;
+  flex-grow: 1;
+}
+
+.card-body::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: #fff9f0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100' preserveAspectRatio='none'%3E%3Cpath d='M0,0 C150,50 350,0 500,50 C650,100 850,50 1000,0 L1000,100 L0,100 Z' fill='%23fff9f0'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  transform: translateY(-5px);
+}
+
+/* TEXTOS */
+.main-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 32px;
+  color: #5d4037;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.description {
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #4e342e;
+}
+
+/* PREÇO */
+.price-section {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.main-price {
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #a1887f;
+}
+
+.price-subtext {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #5d4037;
+}
+
+/* SELO */
+.price-seal {
+  position: absolute;
+  top: 100px;
+  right: 15px;
+  width: 80px;
+  height: 80px;
+  background: #d7ccc8;
+  border: 2px solid #a1887f;
+  border-radius: 5px;
+  transform: rotate(-10deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.price-seal-text {
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: #3e2723;
+}
+
+/* LISTA */
+.benefits-list {
+  list-style: none;
+  margin-bottom: 25px;
+  padding-left: 10px;
+}
+
+.benefits-list li {
+  font-size: 15px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.benefits-list li::before {
+  content: '✓';
+  color: #a1887f;
+  font-weight: 700;
+  margin-right: 12px;
+  font-size: 18px;
+}
+
+/* PRODUÇÃO */
+.limited-production {
+  border: 1px solid #d7ccc8;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.limited-production p {
+  font-size: 13px;
+}
+
+.limited-production::before,
+.limited-production::after {
+  content: '🔥';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+}
+
+.limited-production::before { left: 10px; }
+.limited-production::after { right: 10px; }
+
+/* BOTÃO */
+.whatsapp-button {
+  background: #8d6e63;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.whatsapp-button:hover {
+  background: #795548;
+}
+
+.whatsapp-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whatsapp-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* DEPOIMENTOS */
+.depoimentos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.depoimento {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 300px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  font-style: italic;
+}
+
+/* FOOTER */
+footer {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* ANIMAÇÃO */
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.7s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+  .produtos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #1a1a1a;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 220px;
+    padding: 15px;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .produtos {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-header-image {
+    height: 200px;
+  }
+
+  .main-title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+}
