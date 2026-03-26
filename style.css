@@ -22,6 +22,7 @@ a {
 header {
   background: #1a1a1a;
   color: #fff;
+  font-weight: bold;
   padding: 15px 25px;
   display: flex;
   justify-content: space-between;
@@ -30,6 +31,19 @@ header {
   top: 0;
   z-index: 1000;
 }
+
+/* DEGRADÊ INFERIOR - HEADER */
+header::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 25px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(26,26,26,0.4), rgba(26,26,26,0));
+}
+
 
 .logo {
   font-size: 22px;
@@ -72,26 +86,84 @@ nav a:hover::after {
   cursor: pointer;
 }
 
+#menu{
+  border-radius: 15px;
+}
+
 /* HERO */
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-              url('assets/paes_background.jpg') center/cover no-repeat;
+  position: relative;
+  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+              url('assets/paes_segundo-background.png') center/cover no-repeat;
+  background-position: center 20%;
   color: #fff;
+  /* border: 12px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   padding: 120px 20px;
   font-family: 'Playfair Display', serif;
-}
+} 
 
 .hero h1 {
-  font-size: 82px;
-  margin-bottom: 150px;
+  font-size: 90px;
+  font-weight: bold;
+  margin-bottom: 10px;
   letter-spacing: 1px;
 }
 
-.hero p {
-  margin-bottom: 25px;
-  font-size: 18px;
-  opacity: 0.95;
+.hero p{
+  font-size: 20px;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.hero a {
+  display: inline-block;
+  background: linear-gradient(135deg, #a67c52, #8d6e63);
+  color: #fffaf5;
+  font-weight: 600;
+  padding: 14px 28px;
+  margin-top: 250px;
+  border-radius: 30px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+
+
+.hero a:hover {
+  background: linear-gradient(135deg, #c8a27a, #a67c52);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+}
+
+.hero a:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* DEGRADÊ INFERIOR - HEADER */
+header::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(26, 26, 26, 0.25) 0%,
+    rgba(26, 26, 26, 0.15) 40%,
+    rgba(26, 26, 26, 0.05) 70%,
+    rgba(26, 26, 26, 0) 100%
+  );
 }
 
 /* SECTIONS */
@@ -173,6 +245,7 @@ h2 {
 }
 
 .description {
+  font-weight: bolder;
   font-size: 14px;
   text-align: center;
   line-height: 1.6;
@@ -277,6 +350,7 @@ h2 {
 /* BOTÃO */
 .whatsapp-button {
   background: #8d6e63;
+  font-weight: bold;
   color: #fff;
   text-align: center;
   padding: 15px;
@@ -297,9 +371,16 @@ h2 {
 }
 
 .whatsapp-icon {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   margin-right: 10px;
+  fill: #fff; 
+  
+}
+
+.whatsapp-icon path {
+  stroke: #fff;
+  stroke-width: 30;     /* aumenta a espessura */
 }
 
 /* DEPOIMENTOS */
@@ -335,6 +416,12 @@ footer {
   transition: 0.7s ease;
 }
 
+.hidden p {
+  font-style: italic;
+  font-weight: 500;
+  /* color: blue; */
+}
+
 .show {
   opacity: 1;
   transform: translateY(0);
@@ -350,6 +437,11 @@ footer {
     font-size: 48px;
     margin-bottom: 80px;
   }
+
+  .hero a {
+    display: none;
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -378,11 +470,27 @@ footer {
 
   .hero h1 {
     font-size: 32px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    margin-top: -50px;
   }
 
   .hero p {
     font-size: 16px;
+    font-weight: 500;
+    font-style: italic;
+    color: #fff;
+  }
+
+   .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(assets/paes_segundo-background.png) center / cover no-repeat;
+    background-position: center 0%;
+    background-size: 125%;
+  }
+
+
+  .price-seal{
+   width: 60px;
+   height: 60px
   }
 }
 
