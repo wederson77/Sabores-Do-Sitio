@@ -292,11 +292,16 @@ h2 {
 }
 
 .price-seal-text {
-  font-size: 9px;
+  font-size: 10px;
+  color: rgb(255, 110, 20);
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
-  color: #3e2723;
+  /* color: #3e2723; */
+}
+
+#preco-atacado {
+color: rgb(255, 98, 0);
 }
 
 /* LISTA */
@@ -466,32 +471,110 @@ footer {
 
   .produtos {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
+  .card {
+    padding: 0;
+  }
+
+  .card-header-image {
+    height: 160px; /* menor para dar mais espaço ao conteúdo */
+    margin-bottom: 5px;
+  }
+
+  .card-body {
+    padding: 16px 14px;
+  }
+
+  .price-seal {
+    width: 50px;
+    height: 50px;
+    font-size: 9px;
+  }
+
+  .price-seal-text {
+    font-size: 7px;
+  }
+
+  .main-title {
+    font-size: 22px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+
+  .main-price {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
+  .price-subtext {
+    font-size: 12px;
+    margin-bottom: 14px;
+  }
+
+  .description {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  .benefits-list {
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .benefits-list li {
+    font-size: 13px;
+  }
+
+  .limited-production {
+    padding: 10px;
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+
+  .whatsapp-button {
+    padding: 12px;
+  }
+
+  .whatsapp-title {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .whatsapp-number {
+    font-size: 13px;
+  }
+
+  .footer-text {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  /* ===== HERO (AJUSTE LEVE PRA NÃO ROUBAR ESPAÇO) ===== */
   .hero h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    margin-top: -50px;
+    font-size: 28px;
+    margin-bottom: 15px;
+    margin-top: -30px;
   }
 
   .hero p {
-    font-size: 16px;
-    font-weight: 800;
-    font-style: italic;
-    color: #fff;
+    font-size: 14px;
   }
 
-   .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(assets/paes_segundo-background.png) center / cover no-repeat;
+  .hero {
     background-position: center 0%;
-    background-size: 125%;
+    background-size: 120%;
   }
 
-
-  .price-seal{
-   width: 60px;
-   height: 60px
-  }
 }
 
 @media (max-width: 480px) {
