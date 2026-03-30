@@ -8,8 +8,9 @@
   <link rel="stylesheet" href="style.css">
   <script src="view/menuAnimation.js" defer></script>
   <script src="view/whatsapp.js" defer></script>
-  <script type="module" src="controller/productsController.js"></script>
-  <script type="module" src="controller/main.js"></script>
+  <script type="module" src="controller/productsController.js" defer></script>
+  <script type="module" src="controller/main.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
@@ -17,7 +18,7 @@
 
 <header>
   <div class="logo">Sabores do Sítio</div>
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <div class="menu-toggle">☰</div>
   <nav id="menu">
     <a href="#">Início</a>
     <a href="#produtos">Produtos</a>
@@ -28,7 +29,9 @@
 <section class="hero">
   <h1>Sabores do Sítio</h1>
   <p><p>O verdadeiro sabor da roça, feito no forno à lenha, direto para a sua mesa.</p></p>
-  <a class="btn" onclick="enviarWhats()">Fazer pedido no WhatsApp</a>
+  <a class="btn js-whatsapp">Fazer pedido no WhatsApp</a>
+
+
 </section>
 
 <section class="hidden">
@@ -79,10 +82,10 @@
         Garantimos o Sabor Genuíno em Cada Lote.</p>
       </div>
 
-      <a href="#" class="whatsapp-button" target="_blank">
+    <a href="#" class="whatsapp-button js-whatsapp">
         <p class="whatsapp-title">Garanta Seu Pedido via WhatsApp</p>
-        <div class="whatsapp-number">(11) ********</div>
-      </a>
+        <div class="whatsapp-number"><i style="margin-right: 10px; font-size: x-large;" class="fa-brands fa-whatsapp"></i>(11) ********</div>
+    </a>
 
       <p class="footer-text">Nossos especialistas estão prontos para lhe atender.</p>
 
@@ -129,4 +132,6 @@
 </footer>
 
 </body>
+  <script src="view/whatsapp.js" defer></script>
+
 </html>

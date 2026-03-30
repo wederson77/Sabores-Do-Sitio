@@ -23,5 +23,20 @@ export const products = [
       "Fermentação natural",
       "Sabor autêntico"
     ]
-  }
+  },
+
+   {
+    title: "Pão Integral Caseiro",
+    price: "R$ 1,20",
+    image: "assets/paes_segundo-background.png",
+    description: "Uma opção saudável e deliciosa, feita com grãos selecionados...",
+    benefits: [
+      "Rico em fibras",
+      "Sem conservantes",
+      "Fermentação natural",
+      "Sabor autêntico"
+    ]
+  },
+
+
 ];

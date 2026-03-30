@@ -1,8 +1,20 @@
-function toggleMenu() {
-    document.getElementById("menu").classList.toggle("active");
+// view/menuAnimation.js
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const menu = document.getElementById("menu");
+
+  function toggleMenu() {
+    menu.classList.toggle("active");
   }
 
-  // Animação ao rolar
+  // Evento de clique
+  menuToggle.addEventListener("click", toggleMenu);
+
+  // =============================
+  // Animação ao rolar (mantida)
+  // =============================
+
   const elements = document.querySelectorAll('.hidden');
 
   const observer = new IntersectionObserver(entries => {
@@ -14,3 +26,4 @@ function toggleMenu() {
   });
 
   elements.forEach(el => observer.observe(el));
+});
